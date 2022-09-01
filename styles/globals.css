@@ -16,3 +16,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* tailwind components */
+@layer components {
+  /* Wrapper container */
+  .container {
+    @apply !max-w-screen-2xl mx-auto px-5;
+  }
+}
