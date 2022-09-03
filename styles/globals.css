@@ -28,4 +28,8 @@ p{
   .container {
     @apply !max-w-screen-2xl mx-auto px-5;
   }
+  /* Buttons */
+  .btn-white{
+    @apply bg-white text-title font-bold px-7 py-3 block w-fit rounded hover:shadow-md transition duration-300 ease-in-out;
+  }
 }
