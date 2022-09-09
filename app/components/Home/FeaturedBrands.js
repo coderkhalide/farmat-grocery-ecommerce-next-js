@@ -31,7 +31,7 @@ const OFFERS = [
 
 const FeaturedBrands = () => {
     return (
-        <section className="pt-5 pb-5">
+        <section className="pt-5 pb-14">
             <div className="container">
                 <SectionHeading
                     title="Featured Brands"
