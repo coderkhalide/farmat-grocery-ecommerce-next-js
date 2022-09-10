@@ -5,7 +5,7 @@ import { DEALS } from "../../data/products.js"
 const TodaysDeals = () => {
 
     return (
-        <section className="pt-5 pb-5">
+        <section className="pt-10 pb-5">
             <div className="container">
                 <SectionHeading
                     title="Top Saver Today"

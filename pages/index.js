@@ -5,6 +5,7 @@ import HomeCategory from "../app/components/Home/HomeCategory";
 import HomeHero from "../app/components/Home/HomeHero";
 import HomePosters from "../app/components/Home/HomePosters";
 import TodaysDeals from "../app/components/Home/TodaysDeals";
+import { setBackgroundImage } from "../app/utils/helpers";
 
 export default function Home() {
   return (
@@ -14,8 +15,10 @@ export default function Home() {
       <FeaturedBrands />
       <TodaysDeals />
       <HomePosters />
-      <EssentialProducts />
-      <HealthDaily />
+      <div className="py-5" style={setBackgroundImage('https://demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2021/05/homepage-new-content-bg-scaled.jpg', { backgroundPosition: 'bottom center', backgroundColor: '#f3f3f3', backgroundSize: 'cover' })}>
+        <EssentialProducts />
+        <HealthDaily />
+      </div>
     </>
   )
 }

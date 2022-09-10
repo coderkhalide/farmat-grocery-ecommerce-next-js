@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     }
 
     return (
-        <div className="product-card">
+        <div className="product-card bg-white">
             {oldPrice && (
                 <span className="bg-orange text-white text-xs px-2 py-1 rounded-md absolute top-5 left-5 z-10">
                     {OffCalc()}% OFF
