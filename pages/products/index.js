@@ -1,7 +1,10 @@
+import ProductDetails from "../../app/components/Product/ProductDetails"
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <>
+      <ProductDetails />
+    </>
   )
 }
 
