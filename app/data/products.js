@@ -163,3 +163,101 @@ export const DEALS = [
         "image": "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/09_6a.jpg?resize=768%2C768&ssl=1"
     }
 ]
+
+export const ESSENTIAL = [
+    {
+      id: 1,
+      vendor: "MartFury",
+      name: "Sesame Seed Bread",
+      weight: "500g",
+      price: 30.00,
+      rating: "Rated 5.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2019/12/03_3a.jpg?resize=300%2C300&ssl=1",
+    },
+    {
+      id: 2,
+      vendor: "MartFury",
+      name: "Morrisons The Best Beef",
+      weight: "200g",
+      price: 49.99,
+      rating: "Rated 5.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2019/12/01_18a.jpg?resize=300%2C300&ssl=1",
+    },
+    {
+      id: 3,
+      vendor: "Farmart",
+      name: "Avocado, Hass Large",
+      weight: "500g",
+      price: 10.00,
+      oldPrice: 12.00,
+      rating: "Rated 5.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/01_16a.jpg?resize=300%2C300&ssl=1",
+    },
+    {
+      id: 4,
+      vendor: "Farmart",
+      name: "Italia Beef Lasagne",
+      weight: "500g",
+      price: 5.00,
+      rating: "Rated 5.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/05_4a.jpg?resize=300%2C300&ssl=1",
+    },
+    {
+      id: 5,
+      vendor: "MartFury",
+      name: "Maxwell House Classic Roast ...",
+      weight: "1.5kg",
+      price: 4.00,
+      rating: "Rated 5.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/06_3a.jpg?resize=300%2C300&ssl=1",
+    },
+    {
+      id: 6,
+      vendor: "MartFury",
+      name: "Soft Mochi & Galeto Ice...",
+      weight: "200g",
+      price: 20.99,
+      oldPrice: 21.50,
+      rating: "Rated 4.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/04_4a.jpg?resize=300%2C300&ssl=1",
+    },
+    {
+      id: 7,
+      vendor: "MartFury",
+      name: "Bottled Pure Water 500ml",
+      weight: "500g",
+      price: 6.90,
+      rating: "Rated 2.00 out of 5",
+      image:
+        "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/06_7a.jpg?resize=300%2C300&ssl=1",
+    },
+  ];
+
+export const HEALTHY = [
+    {
+        id: 1,
+        author: "drfurion",
+        category: "Foods,News",
+        date: "Sep 30, 2021",
+        title: "The Intermediate Guide to Food",
+        description:
+            "Lorem ipsum dolor sit amet, consect etur adipiscing elit. Aenean sagittis ornare diam, quis pharetrat...",
+        image: "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2019/09/b3.jpg?resize=768%2C512&ssl=1"
+    },
+    {
+        id: 2,
+        author: "drfurion",
+        category: "Foods",
+        date: "Sep 30, 2019",
+        title: "The Evolution of Food",
+        description:
+            "Lorem ipsum dolor sit amet, consect etur adipiscing elit. Aenean sagittis ornare diam, quis pharetrat...",
+        image: "https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2019/09/b2.jpg?resize=768%2C521&ssl=1"
+    },
+];

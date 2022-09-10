@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
             />
             {/* Product Details */}
             <div className="flex flex-col gap-1 mt-2 w-full">
-                <h4 className="text-sm font-bold text-color">Farmart</h4>
+                <h4 className="w-[275px] text-sm font-bold text-color">Farmart</h4>
                 <h3 className="text-lg font-bold text-title truncate">{name}</h3>
                 <span className="text-sm text-color">{weight}</span>
                 <div className="flex items-center gap-1">
