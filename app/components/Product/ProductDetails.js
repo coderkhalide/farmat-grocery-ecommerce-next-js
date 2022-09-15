@@ -1,4 +1,5 @@
 import FooterCard from "../FooterCard"
+import Quantity from "../shared/Quantity"
 
 const ProductDetails = ({ price = 30.25, oldPrice }) => {
     return (
@@ -7,7 +8,7 @@ const ProductDetails = ({ price = 30.25, oldPrice }) => {
                 <div className="p-10 bg-white rounded-2xl">
                     <div className="flex flex-wrap lg:flex-row flex-col lg:gap-0 gap-7">
                         <div className="lg:w-2/5 w-full lg:border-r">
-                            <img src="https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/02_3a.jpg?fit=640%2C640&ssl=1" alt="" loading="lazy" />
+                            <img src="https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/05_11a.jpg?fit=800%2C800&ssl=1" alt="" loading="lazy" />
                         </div>
                         <div className="lg:w-2/5 w-full lg:px-10 pl-0">
                             <div className="text-color mb-5">
@@ -17,10 +18,10 @@ const ProductDetails = ({ price = 30.25, oldPrice }) => {
                                 <span className="mx-2">/</span>
                                 <a href="/">Fruits</a>
                                 <span className="mx-2">/</span>
-                                <span className="text-title">Bar S - Classic Bun Length Franks</span>
+                                <span className="text-title">Naked Noodle Egg Noodles Singapore</span>
                             </div>
                             <h4 className="md:text-xl text-base font-bold mb-2 text-orange">MartFury</h4>
-                            <h1 className="text-title md:text-3xl text-xl font-semibold mb-5">Bar S - Classic Bun Length Franks</h1>
+                            <h1 className="text-title md:text-3xl text-xl font-semibold mb-5">Naked Noodle Egg Noodles Singapore</h1>
                             <span className="text-color text-xs">⭐⭐⭐⭐⭐ (1 customer review)</span>
                             <div className="my-3">
                                 <span className="text-sm text-color mb-2 block">500gl</span>
@@ -38,15 +39,7 @@ const ProductDetails = ({ price = 30.25, oldPrice }) => {
                             <div className="my-5">
                                 <span className="text-sm pb-2 block text-color">Quantity:</span>
                                 <div className="flex gap-3">
-                                    <div className="flex border">
-                                        <button className="w-10 bg-[#F5F5F5] flex items-center justify-center">
-                                            -
-                                        </button>
-                                        <div className="w-10 flex items-center justify-center">1</div>
-                                        <button className="w-10 bg-[#F5F5F5] flex items-center justify-center">
-                                            +
-                                        </button>
-                                    </div>
+                                    <Quantity />
                                     <button className="btn-white bg-primary">Add to cart</button>
                                 </div>
                             </div>

@@ -59,3 +59,8 @@ p{
     @apply !w-[275px] flex flex-col items-start cursor-pointer p-5 rounded hover:card-shadow transition-all duration-500 relative border border-gray-100 hover:border-gray-200;
   }
 }
+
+/* Mantain Tab */
+.mantine-Tabs-tab{
+  padding: 15px;
+}
