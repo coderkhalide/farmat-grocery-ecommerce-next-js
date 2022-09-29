@@ -129,7 +129,7 @@ const Description = () => {
   const [local, setLocal] = useState(draftToHtml(BODY));
 
   return (
-    <div className="prose prose-sm">
+    <div className="prose prose-sm max-w-none">
       <div className="preview" dangerouslySetInnerHTML={{ __html: local }} />
     </div>
   )

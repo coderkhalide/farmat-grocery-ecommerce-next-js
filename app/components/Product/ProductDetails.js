@@ -1,4 +1,5 @@
 import FooterCard from "../FooterCard"
+import Breadcrumb from "../shared/Breadcrumb"
 import Quantity from "../shared/Quantity"
 
 const ProductDetails = ({ price = 30.25, oldPrice }) => {
@@ -11,16 +12,14 @@ const ProductDetails = ({ price = 30.25, oldPrice }) => {
                             <img src="https://i0.wp.com/demo4.drfuri.com/farmart2/wp-content/uploads/sites/11/2020/02/05_11a.jpg?fit=800%2C800&ssl=1" alt="" loading="lazy" />
                         </div>
                         <div className="lg:w-2/5 w-full lg:px-10 pl-0">
-                            <div className="text-color mb-5">
-                                <a href="/">Home</a>
-                                <span className="mx-2">/</span>
-                                <a href="/">Shop</a>
-                                <span className="mx-2">/</span>
-                                <a href="/">Fruits</a>
-                                <span className="mx-2">/</span>
-                                <span className="text-title">Naked Noodle Egg Noodles Singapore</span>
-                            </div>
-                            <h4 className="md:text-xl text-base font-bold mb-2 text-orange">MartFury</h4>
+                            <Breadcrumb
+                                items={[
+                                    { label: 'Home', href: '/' },
+                                    { label: 'Shop', href: '/products' },
+                                    { label: 'Naked Noodle Egg Noodles Singapore' },
+                                ]}
+                            />
+                            <h4 className="md:text-xl text-base font-bold mb-2 mt-5 text-orange">MartFury</h4>
                             <h1 className="text-title md:text-3xl text-xl font-semibold mb-5">Naked Noodle Egg Noodles Singapore</h1>
                             <span className="text-color text-xs">⭐⭐⭐⭐⭐ (1 customer review)</span>
                             <div className="my-3">
