@@ -64,3 +64,9 @@ p{
 .mantine-Tabs-tab{
   padding: 15px;
 }
+
+@media (max-width: 768px) {
+  .table_row{
+    display: none;
+  }
+}
