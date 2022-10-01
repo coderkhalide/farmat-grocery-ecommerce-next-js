@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../shared/Button'
+import Link from 'next/link'
 
 const CartActions = () => {
     return (
@@ -37,10 +38,12 @@ const CartActions = () => {
                         <h2 className="text-xl font-bold">Subtotal</h2>
                         <h2 className="text-xl font-bold text-green">$200.00</h2>
                     </div>
-                    <Button
-                        title="Apply"
-                        className="w-full py-3"
-                    />
+                    <Link href="/checkout">
+                        <Button
+                            title="Checkout"
+                            className="w-full py-3"
+                        />
+                    </Link>
                 </div>
             </div>
         </div>

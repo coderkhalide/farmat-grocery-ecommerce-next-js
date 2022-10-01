@@ -5,7 +5,7 @@ const Quantity = () => {
             <button className="w-10 bg-[#F5F5F5] flex items-center justify-center">
                 -
             </button>
-            <div className="flex-grow flex items-center justify-center">1</div>
+            <div className="px-5 flex-grow flex items-center justify-center">1</div>
             <button className="w-10 bg-[#F5F5F5] flex items-center justify-center">
                 +
             </button>
