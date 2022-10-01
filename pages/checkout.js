@@ -3,9 +3,6 @@ import CheckoutContent from '../app/components/checkout/CheckoutContent'
 import Breadcrumb from "../app/components/shared/Breadcrumb"
 
 const Checkout = () => {
-
-  
-
   return (
     <main>
       <div className="bg-[#F5F5F5] p-5">
