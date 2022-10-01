@@ -1,0 +1,22 @@
+.formBtn{
+    background: #FFFFFF;
+    border-radius: 19px;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    margin: 5px auto;
+    outline: none;
+    border: none;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formBtn span{
+    font-weight: normal;
+    font-size: 15px;    
+    color: #000;
+    margin: 0 5px;
+    margin-bottom: 0px !important;
+    padding: 15px 0;
+}

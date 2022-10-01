@@ -15,11 +15,14 @@
     "@tailwindcss/typography": "^0.5.7",
     "draft-js": "^0.11.7",
     "draftjs-to-html": "^0.9.1",
+    "formik": "^2.2.9",
     "markdown-draft-js": "^2.4.0",
+    "multiselect-react-dropdown": "^2.0.25",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
