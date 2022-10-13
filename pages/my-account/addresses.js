@@ -1,8 +1,9 @@
 import React from 'react'
+import DashboardLayout from '../../app/layout/DashboardLayout'
 
 const Addresses = () => {
   return (
-    <div>Addresses</div>
+    <DashboardLayout>Addresses</DashboardLayout>
   )
 }
 
