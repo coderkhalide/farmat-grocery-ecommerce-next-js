@@ -10,6 +10,11 @@ export const DASHBOARD_NAV = [
         icon: <FiSliders />,
     },
     {
+        title: "Orders",
+        href: '/my-account/orders',
+        icon: <BsCart />,
+    },
+    {
         title: "User Profile",
         href: '/my-account/edit-account',
         icon: <BiUser />,
@@ -18,11 +23,6 @@ export const DASHBOARD_NAV = [
         title: "Addresses",
         href: '/my-account/addresses',
         icon: <TbAddressBook />,
-    },
-    {
-        title: "Orders",
-        href: '/my-account/orders',
-        icon: <BsCart />,
     },
     // {
     //     title: "Reviews",
