@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeUser, updateUser } from '../redux/slices/authSlice'
 import { selectItems, updateBasket } from '../redux/slices/basketSlice'
-import { auth } from '../utils/firebase'
+import { auth, db } from '../utils/firebase'
 import Footer from './Footer'
 import Header from './Header'
 
@@ -15,13 +15,11 @@ const Layout = ({ children }) => {
         // firebase user listeners
         const unsubscribe = auth.onAuthStateChanged(async (user) => {
             if (user) {
-                dispatch(
-                    updateUser({
-                        email: user.email,
-                        name: user.displayName,
-                        image: user.photoURL,
-                    })
-                )
+                db.collection('users').doc(user.uid).get().then((doc) => {
+                    if (doc.exists) {
+                        dispatch(updateUser(doc.data()));
+                    }
+                })
             } else {
                 dispatch(
                     removeUser()
@@ -40,7 +38,7 @@ const Layout = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        if(!cartItems.length) return;
+        if (!cartItems.length) return;
         // save cart items to local storage
         const items = JSON.stringify(cartItems)
         localStorage.setItem('@CART_ITEMS', items)
