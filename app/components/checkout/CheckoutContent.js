@@ -8,6 +8,7 @@ import { selectUser } from '../../redux/slices/authSlice';
 import { useSelector } from 'react-redux';
 import { selectItems, selectTotalPrice } from '../../redux/slices/basketSlice';
 import { uuid } from '../../utils/helpers';
+import { useRouter } from 'next/router';
 
 const validationSchema = Yup.object().shape({
     first_name: Yup.string().max(25).required().label("First name"),
@@ -28,11 +29,16 @@ const CheckoutContent = () => {
     const cartItems = useSelector(selectItems)
     const cartTotal = useSelector(selectTotalPrice)
     const [loading, setLoading] = useState(false)
+    const router = useRouter()
 
     const placeOrder = async (values) => {
         setLoading(true)
         await saveBillingDetails(values)
-        await placeOrderHandler(values)
+
+        const order_id = uuid()
+
+        await placeOrderHandler(values, order_id)
+        router.push('/success?order_id=' + order_id)
         setLoading(false)
     }
 
@@ -42,8 +48,7 @@ const CheckoutContent = () => {
         }, { merge: true })
     }
 
-    const placeOrderHandler = async (values) => {
-        const order_id = uuid()
+    const placeOrderHandler = async (values, order_id) => {
         const orderData = {
             order_id,
             ...user,
