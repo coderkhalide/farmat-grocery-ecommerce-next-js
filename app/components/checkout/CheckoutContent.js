@@ -5,8 +5,8 @@ import * as Yup from "yup";
 import { AppForm } from '../shared/Form';
 import { db, timestamp } from '../../utils/firebase'
 import { selectUser } from '../../redux/slices/authSlice';
-import { useSelector } from 'react-redux';
-import { selectItems, selectTotalPrice } from '../../redux/slices/basketSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectItems, selectTotalPrice, updateBasket } from '../../redux/slices/basketSlice';
 import { uuid } from '../../utils/helpers';
 import { useRouter } from 'next/router';
 
@@ -30,6 +30,7 @@ const CheckoutContent = () => {
     const cartTotal = useSelector(selectTotalPrice)
     const [loading, setLoading] = useState(false)
     const router = useRouter()
+    const dispatch = useDispatch()
 
     const placeOrder = async (values) => {
         setLoading(true)
@@ -39,6 +40,7 @@ const CheckoutContent = () => {
 
         await placeOrderHandler(values, order_id)
         router.push('/success?order_id=' + order_id)
+        dispatch(updateBasket([]))
         setLoading(false)
     }
 

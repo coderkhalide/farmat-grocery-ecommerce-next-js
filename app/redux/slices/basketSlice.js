@@ -29,7 +29,7 @@ export const basketSlice = createSlice({
         decreaseItemQuantity: (state, action) => {
             state.items = state.items.map(item => {
                 if (item.id !== action.payload) return item;
-                if(item.quantity === 1) return false;
+                if (item.quantity === 1) return false;
                 return {
                     ...item,
                     quantity: item.quantity - 1

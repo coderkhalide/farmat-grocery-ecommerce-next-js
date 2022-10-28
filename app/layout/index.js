@@ -38,9 +38,8 @@ const Layout = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        if (!cartItems.length) return;
         // save cart items to local storage
-        const items = JSON.stringify(cartItems)
+        const items = JSON.stringify(cartItems || [])
         localStorage.setItem('@CART_ITEMS', items)
     }, [cartItems])
 
