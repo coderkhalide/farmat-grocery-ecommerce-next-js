@@ -1,3 +1,4 @@
+import AdminMain from "../admin/components/dashboard/AdminMain";
 import EssentialProducts from "../app/components/Home/EssentialProducts";
 import FeaturedBrands from "../app/components/Home/FeaturedBrands";
 import HealthDaily from "../app/components/Home/HealthDaily";
@@ -5,9 +6,12 @@ import HomeCategory from "../app/components/Home/HomeCategory";
 import HomeHero from "../app/components/Home/HomeHero";
 import HomePosters from "../app/components/Home/HomePosters";
 import TodaysDeals from "../app/components/Home/TodaysDeals";
-import { setBackgroundImage } from "../app/utils/helpers";
+import { getPage, getPageServer, setBackgroundImage } from "../app/utils/helpers";
 
-export default function Home() {
+export default function Home({page}) {
+
+  if (page === 'admin') return <AdminMain />
+
   return (
     <>
       <HomeHero />
@@ -21,4 +25,19 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  let page
+  const { req } = context;
+  if (req) {
+    let host = req.headers.host
+    page = getPageServer(host) || null
+  }
+
+  return {
+    props: {
+      page: page
+    },
+  }
 }

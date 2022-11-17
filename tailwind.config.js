@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
+    "./admin/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
