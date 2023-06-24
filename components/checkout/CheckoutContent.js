@@ -72,34 +72,42 @@ const CheckoutContent = () => {
   //   };
 
   return (
-    <div className="flex flex-wrap md:flex-nowrap gap-5">
-      <AppForm
-        initialValues={{
-          first_name: user?.billing_details?.first_name || "",
-          last_name: user?.billing_details?.last_name || "",
-          company: user?.billing_details?.company || "",
-          country: user?.billing_details?.country || "",
-          address: user?.billing_details?.address || "",
-          city: user?.billing_details?.city || "",
-          state: user?.billing_details?.state || "",
-          zip: user?.billing_details?.zip || "",
-          phone: user?.billing_details?.phone || "",
-          email: user?.billing_details?.email || "",
-          notes: "",
-        }}
-        // onSubmit={placeOrder}
-        validationSchema={validationSchema}
-      >
-        <div className="w-full md:w-[60%]">
-          <BillingInfo />
-        </div>
-        <div className="w-full md:w-[40%]">
-          <YourOrder
-            //   placeOrder={placeOrder}
-            loading={loading}
-          />
-        </div>
-      </AppForm>
+    // <div className="flex flex-wrap md:flex-nowrap gap-5">
+    //   <AppForm
+    //     initialValues={{
+    //       first_name: user?.billing_details?.first_name || "",
+    //       last_name: user?.billing_details?.last_name || "",
+    //       company: user?.billing_details?.company || "",
+    //       country: user?.billing_details?.country || "",
+    //       address: user?.billing_details?.address || "",
+    //       city: user?.billing_details?.city || "",
+    //       state: user?.billing_details?.state || "",
+    //       zip: user?.billing_details?.zip || "",
+    //       phone: user?.billing_details?.phone || "",
+    //       email: user?.billing_details?.email || "",
+    //       notes: "",
+    //     }}
+    //     // onSubmit={placeOrder}
+    //     validationSchema={validationSchema}
+    //   >
+    //     <div className="w-full md:w-[60%]">
+    //       <BillingInfo />
+    //     </div>
+    //     <div className="w-full md:w-[40%]">
+    //       <YourOrder
+    //         //   placeOrder={placeOrder}
+    //         loading={loading}
+    //       />
+    //     </div>
+    //   </AppForm>
+    // </div>
+    <div className="flex">
+      <div className="w-[50%] border-r-2 pl-10 pr-16 pb-10">
+        <BillingInfo />
+      </div>
+      <div className="w-[50%] px-10 pb-10 pt-16">
+        <YourOrder />
+      </div>
     </div>
   );
 };
