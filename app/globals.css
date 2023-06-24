@@ -1,27 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,
+body {
+  font-family: "Mulish", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* @apply text-title; */
+}
+p {
+  @apply text-color;
+}
+/* tailwind components */
+@layer components {
+  /* Wrapper container */
+  .container {
+    @apply !max-w-screen-2xl mx-auto px-5;
+  }
+  /* Buttons */
+  .btn-white {
+    @apply bg-white text-title font-bold px-7 py-3 block w-fit rounded hover:shadow-md transition duration-300 ease-in-out;
+  }
+  /* Section title */
+  .section-title {
+    @apply md:text-4xl text-2xl font-bold text-center text-title;
+  }
+  /* card Shadow */
+  .card-shadow {
+    box-shadow: 0 30px 40px 0 rgb(131 132 135 / 15%);
+    -webkit-box-shadow: 0 30px 40px 0 rgb(131 132 135 / 15%);
+  }
+
+  /* Hide Scrollbar */
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Products */
+  /* product card */
+  .product-card {
+    @apply !w-[275px] h-full max-h-[380px] flex flex-col items-start cursor-pointer p-5 rounded hover:card-shadow transition-all duration-500 relative border border-gray-100 hover:border-gray-200 mx-auto;
+  }
+  /* category card */
+  .category-card {
+    @apply !w-[170px] rounded flex flex-col items-center cursor-pointer p-5 hover:card-shadow transition-all duration-500 mx-auto;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Mantain Tab */
+.mantine-Tabs-tab {
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .table_row {
+    display: none;
+  }
+}
+/* =========== ReviewsCart CSS ========== */
+.custom-rating .fa-star-o {
+  color: #373737; /* Define the color for empty stars */
+}
+
+.custom-rating .fa-star {
+  color: #f8b739; /* Define the color for filled stars */
+}
+/* =============== OfferZone ======== */
+@media only screen and (max-width: 1230px) {
+  .offer_zone {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 1142px) {
+  .offer_zone {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 885px) {
+  .offer_zone {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 605px) {
+  .offer_zone {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }

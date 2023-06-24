@@ -1,0 +1,72 @@
+.container{
+    background: var(--background);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navLeft{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+}
+.logoImage{
+    cursor: pointer;
+}
+.navProjects{
+    margin-left: 35px;
+}
+.navRight{
+    display: flex;
+    align-items: center;
+}
+.navRight__apps{
+    margin:0 15px;
+}
+.sidebarToggle{
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background: var(--deep-purple-50);
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    cursor: pointer;
+}
+.icon {
+    color: var(--deep-purple-500);
+    font-size: 21px !important;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+.sidebarToggle:hover{
+    background: var(--deep-purple-500);
+}
+.sidebarToggle:hover .icon{
+    color: var(--white);
+}
